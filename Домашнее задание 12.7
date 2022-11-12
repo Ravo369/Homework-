@@ -1,0 +1,17 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+money = input("Введите сумму")
+a, b, c, d = per_cent['ТКБ'], per_cent['СКБ'], per_cent['ВТБ'], per_cent['СБЕР']
+e = int(money)
+deposit_TKB = e*a/100
+deposit_SKB = e*b/100
+deposit_VTB = e*c/100
+deposit_SBER = e*d/100
+print("ТКБ:", deposit_TKB)
+print("СКБ:", deposit_SKB)
+print("ВТБ:", deposit_VTB)
+print("СБЕР:", deposit_SBER)
+L = [deposit_TKB,deposit_SKB,deposit_VTB,deposit_SBER]
+max_number = max(L)
+max_element = max(per_cent.values())
+max_val_key = max(per_cent, key=per_cent.get)
+print("Максимальная сумма, которую вы можете заработать:", max_number, "в банке",max_val_key )
